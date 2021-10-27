@@ -2,7 +2,7 @@ import React from 'react'
 import {View, Text, Image, TouchableOpacity} from 'react-native'
 import {AntDesign} from '@expo/vector-icons'
 
-export default function Login(){
+export default function Login({navigation}){
     return (
     <View style = {{ flex:1 , justifyContent: "center", alignItems: "center"}} > 
     
@@ -11,6 +11,7 @@ export default function Login(){
         width : 170,
         height : 170,
         borderRadius : 15,
+        transform: [{rotate: '-40deg'}],
         marginBottom : 15,
         }
     }
@@ -35,7 +36,11 @@ export default function Login(){
      </TouchableOpacity>
            </View>
 
-     <TouchableOpacity style ={{
+     <TouchableOpacity
+     onPress={()=>{
+         navigation.navigate('Home')
+     }}
+      style ={{
       backgroundColor:"black", 
          padding : 10, 
          paddingHorizontal :60,
@@ -50,7 +55,7 @@ export default function Login(){
 
      <View>
      <TouchableOpacity>
-     <Text style={{marginTop:10}}> Not a member? <Text style={{color:"orange", fontSize:15 ,fontWeight:'bold'}}>Signup</Text></Text>
+     <Text style={{marginTop:10, color:"grey"}}> Not a member? <Text style={{color:"orange", fontSize:15 ,fontWeight:'bold'}}>Signup</Text></Text>
      </TouchableOpacity>
      </View>
     </View> 
