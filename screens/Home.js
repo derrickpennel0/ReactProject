@@ -135,7 +135,7 @@ const updateHeart = (id) => {
         <Ionicons name="menu-outline" size={24} color="black" />
 
         
-          <FontAwesome name="motorcycle" size={24} color="black" />
+          <FontAwesome name="motorcycle" size={25} color="black" />
      
 
         <View style={{ flexDirection: "row" }}>
